@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Doctor Template | @rohit_virkud</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        .screen-01
+        {
+            width: 100%;
+            height: 100vh;
+            background:#1E4E7D;
+            overflow: hidden;
+        }
+        .background-image-screen-01
+        {
+            width: 100%;
+            height: 40vh;
+            background: url('image background.png')no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+           
+        }
+        .texture-blue-background
+        {
+            width: 100%;
+            height: 60vh;
+            background: url('fading-blue-background.png')no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+
+        }
+        .my-container
+        {
+           width: min(85vw,120vh);
+          
+        
+        }
+        .social-media
+        {
+            margin-top: min(6vw,3vh);
+            
+            
+        }
+        .social-media .youtube-icon{
+             width: min(4.623vw,2.3vh);
+             height: min(5.596vw,2.5vh);
+        }
+        .social-media .instagram-icon{
+             width: min(5.109vw,2.4vh);
+             height: min(5.109vw,2.4vh);
+        }
+        .social-media .facebook-icon{
+             width: min(2.433vw,1.2vh);
+             height: min(5.353vw,2.5vh);
+        }
+        .headline
+        {
+            margin-top: min(8vw,4vh);
+            width: min(50vw,25vh);
+            font-weight: 700;
+            font-size: min(6vw,2.8vh);
+        }
+        .paragraph-mgTop
+        {
+            margin-top: min(8vw,4vh);
+            width: min(50vw,25vh);
+            font-weight: 400;
+            font-size: min(3.2vw,1.5vh);
+
+        }
+        .paragraph
+        {
+          
+            width: min(50vw,25vh);;
+            font-weight: 400;
+            font-size: min(3.2vw,1.5vh)
+        }
+        .paragraph-bold
+        {
+            margin-top: min(5vw,2.5vh);;
+            width: min(50vw,25vh);;
+            font-weight: 700;
+            font-size: min(3.2vw,1.5vh);
+
+        }
+        .contact-container
+        {
+            height: 10vw;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+           
+            margin-top: min(4vw,2vh);;
+        }
+        .extraMT
+        {
+            margin-top: 10vw;
+        }
+        .phone-icon
+        {
+            width: min(15.815vw,8.5vh);
+            height: min(15.815vw,8.5vh);
+            margin-top: min(2.433vw,1.2vh);
+        }
+        .icon-text
+        {
+            width: min(50vw,25vh);
+            font-weight: 400;
+            font-size: min(4vw,2.2vh)
+        }
+        
+        .share-icons-wrapper
+        {
+           width: min(90vw,45vh);
+           margin-top: min(8vw,4vh);
+           display: flex;
+           justify-content: center;
+        }
+        .share-container
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+        }
+
+        .share-icon-text
+        {
+            width: min(20vw,10vh);
+            font-weight: 400;
+            font-size: min(5vw,1.6vh)
+
+        }
+        .share-icon
+        {
+            width: min(19.465vw,9vh);
+            height: min(19.465vw,9vh);
+            margin-top: min(2.433vw,1.3vh);
+            z-index: 2;
+        }
+        .lottie-anim
+        {
+            position: absolute;
+            top: min(200vw,80vh);
+            left: min(-15vw,15vh);
+            width: min(50vw,25vh);
+            height: min(50vw,25vh);
+        }
+        lottie-player
+        {
+            width:min(72.993vw,36vh);
+            height: min(72.993vw,36vh);
+        }
+        .block-red
+        {
+            width: min(24.331vw,12vh);
+            height:  min(24.331vw,12vh);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .flex p
+        {
+            font-size: min(3.5vw,1.2vh);
+            margin-right:min(2vw,1vh);
+        }
+        .flex img
+        {
+            width: min(2.433vw,1.2vh);
+            height: min(4.38vw,2.2vh);
+        }
+        .swipe-arrow
+        {
+            position: absolute;
+            top: min(180vw,75vh);
+            right: min(20vw,10vh);
+            width: min(48.662vw,24vh);
+            height: min(48.662vw,24vh);
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="screen-01">
+        <div class="background-image-screen-01">
+            <div class="my-container">
+                
+                <div class="social-media">
+                    <a href="#"><img src="youtube.png" class="youtube-icon"></a>
+                    <a href="#" style="margin-left: 1.5vw;"><img src="instagram.png"  class="instagram-icon"></a>
+                    <a href="#" style="margin-left: 1.5vw;"><img src="facebook.png"  class="facebook-icon"></a>
+                </div>
+
+                <h1 class="headline">DR. ΦΩτης ΑρχοντοβασΙλης</h1>
+                <p class="paragraph-mgTop">MD, PhD, FISS, FEHS </p>
+                <p class="paragraph">Γενική - Λαπαροσκοπική και Ρομποτική Χειρουργικ</p>
+
+                <p class="paragraph-bold">Dr. Fotis Archontovasilis
+                    AWR and Hernia Specialist, 
+                    Laparoscopic and Robotic Surgery</p>
+            </div>
+           
+        </div>
+        <div class="texture-blue-background">
+         
+            <div class="my-container" style="width: 90vw;">
+                <div class="contact-container extraMT">
+                    <img src="phone-icon.png" class="phone-icon">
+                    <p class="icon-text">+30 6974442532</p>
+                </div>
+
+                <div class="contact-container">
+                    <img src="mobile icon.png" class="phone-icon">
+                    <p class="icon-text">+30 2106502850 </p>
+                </div>
+
+                <div class="contact-container">
+                    <img src="email icon.png" class="phone-icon">
+                    <p class="icon-text">info@oxeirourgos.gr
+                        2</p>
+                </div>
+
+                <div class="contact-container">
+                    <img src="location icon.png" class="phone-icon">
+                    <p class="icon-text">Πυθαγόρα 7, Χολαργός, 
+                        155 62, Αθήνα</p>
+                </div>
+               
+                
+                <div class="contact-container">
+                    <img src="web icon.png" class="phone-icon">
+                    <p class="icon-text"> www.oxeirourgos.gr</p>
+                </div>
+
+
+
+                <div class="share-icons-wrapper">
+                    
+                    <lottie-player src="https://assets3.lottiefiles.com/datafiles/esl8xY51U6kPOH77sIacyZnZHl5QCLTgmt2DYTUY/Music Spectrum/music.json"  
+                    background="transparent"  speed="1"  class="lottie-anim"   
+                    loop  autoplay></lottie-player>
+    
+
+
+                    <div class="share-container">
+                        <img src="addcontact.png" class="share-icon">
+                        <p class="share-icon-text">add 
+                            my contact</p>
+                    </div>
+                    <div class="share-container" style="margin-left: 6vw;">
+                        <img src="share-icon.png" class="share-icon">
+                        <p class="share-icon-text">share 
+                            my contact</p>
+                    </div>
+
+
+                    <div class="block-red">
+                        <div class="flex">
+                            <p>swipe left</p>
+                            <img src="swipe-arrow.png">
+                        </div>
+                     </div> 
+
+                </div>
+
+               
+               
+
+               
+              
+               
+
+            </div>
+    
+        </div>
+    </div>
+</body>
+</html>
