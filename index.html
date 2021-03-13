@@ -103,7 +103,7 @@
         }
         .contact-container
         {
-            height: min(15vw,8vh);
+            height: min(15vw,7vh);
             width: 100vw;
             display: flex;
             align-items: center;
@@ -131,7 +131,7 @@
         {
          width: 90vw;
           bottom: 0;
-          position: absolute;
+          position: fixed;
           margin-bottom: 10px;
           display: flex;
           justify-content: center;
@@ -163,7 +163,7 @@
         }
         .lottie-anim
         {
-            position: fixed;
+            position: absolute;
             bottom: -5%;
             left: min(-10vw,15vh);
             width: min(50vw,25vh);
@@ -178,7 +178,7 @@
         {
             width: min(24.331vw,12vh);
             height:  min(24.331vw,12vh);
-           
+            position: absolute;
             bottom: -20%;
             right: -3%;
             display: flex;
@@ -266,13 +266,11 @@
                     <p class="icon-text"> www.oxeirourgos.gr</p>
                 </div>
 
-                
-
-                <div class="share-icons-wrapper">
-                    
                 <lottie-player src="https://assets3.lottiefiles.com/datafiles/esl8xY51U6kPOH77sIacyZnZHl5QCLTgmt2DYTUY/Music Spectrum/music.json"  
                 background="transparent"  speed="1"  class="lottie-anim"   
                 loop  autoplay></lottie-player>
+
+                <div class="share-icons-wrapper">
 
                     <div class="share-container">
                         <img src="addcontact.png" class="share-icon">
