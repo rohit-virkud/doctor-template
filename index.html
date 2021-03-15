@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <style type="text/css">
 	*{
 		font-family: 'Roboto', sans-serif;
@@ -33,9 +34,9 @@
     }
    
 
-    .screen-01,.screen-02,.screen-03
+    .screen-01,.screen-02,.screen-03,.screen-04,.screen-05
     {
-        overflow-y: hidden;
+        overflow: hidden;
     }
 
 	.swiper-container
@@ -305,7 +306,7 @@
         .screen-02 p
         {
             width: min(85vw 42.5vh);
-            font-size: min(3.5vw,1.5vh);
+            font-size: min(4vw,1.8vh);
             color: #5F6061;
             margin-top: min(5vw,2.5vh);
         }
@@ -637,7 +638,9 @@
 </style>
 </head>
 <body>
- 
+ <audio id="audio">
+  <source src="doc.mpeg" type="audio/mpeg">
+</audio>
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -671,46 +674,46 @@
 						<p class="icon-text">+30 6974442532</p>
 					</a>
 	
-					<div class="contact-container"  data-swiper-parallax="-300">
+					<a href="#" class="contact-container"  data-swiper-parallax="-300">
 						<img src="mobile icon.png" class="phone-icon">
 						<p class="icon-text">+30 2106502850 </p>
-					</div>
+                    </a>
 	
-					<div class="contact-container" data-swiper-parallax="-300">
+					<a href="#" class="contact-container" data-swiper-parallax="-300">
 						<img src="email icon.png" class="phone-icon" >
 						<p class="icon-text">info@oxeirourgos.gr
 							2</p>
-					</div>
+                        </a>
 	
-					<div class="contact-container" data-swiper-parallax="-300">
+					<a href="#" class="contact-container" data-swiper-parallax="-300">
 						<img src="location icon.png" class="phone-icon" >
 						<p class="icon-text">Πυθαγόρα 7, Χολαργός, 
 							155 62, Αθήνα</p>
-					</div>
+                        </a>
 				   
 					
-					<div class="contact-container" data-swiper-parallax="-300">
+					<a href="#" class="contact-container" data-swiper-parallax="-300">
 						<img src="web icon.png" class="phone-icon">
 						<p class="icon-text"> www.oxeirourgos.gr</p>
-					</div>
+                    </a>
 	
-					<!-- <lottie-player src="https://assets3.lottiefiles.com/datafiles/esl8xY51U6kPOH77sIacyZnZHl5QCLTgmt2DYTUY/Music Spectrum/music.json"  
-					background="transparent"  speed="1"  class="lottie-anim"   
-					loop  autoplay></lottie-player> -->
+				 <lottie-player src="https://assets3.lottiefiles.com/datafiles/esl8xY51U6kPOH77sIacyZnZHl5QCLTgmt2DYTUY/Music Spectrum/music.json"  
+					background="transparent"  speed="1"  class="lottie-anim"  onclick="play2()"   
+					loop  autoplay style="cursor: pointer;z-index: 999;"></lottie-player>
 	
 					<div class="share-icons-wrapper">
 	
                      <div class="share-icon-holder" style="display: flex;">     
-						<div class="share-container" data-swiper-parallax="-400">
+						<a href="#" class="share-container" data-swiper-parallax="-400">
 							<img src="addcontact.png" class="share-icon">
 							<p class="share-icon-text">add 
 								my contact</p>
-						</div>
-						<div class="share-container" style="margin-left: 6vw;" data-swiper-parallax="-400">
+                            </a>
+						<a href="#" class="share-container" style="margin-left: 6vw;" data-swiper-parallax="-400">
 							<img src="share-icon.png" class="share-icon">
 							<p class="share-icon-text">share 
 								my contact</p>
-						</div>
+                            </a>
                     </div>
 	
 	
@@ -724,6 +727,7 @@
 					</div>
 	
 				</div>
+                
 		
 			</div>
       </div>
@@ -922,6 +926,26 @@
   			prevEl: '.swiper-button-prev'
   		}
   	});
+
+
+    function play2() { 
+    
+       
+        var audioElement = document.getElementById("audio");
+          
+        if (audioElement.paused) {
+             /* Audio link for notification */ 
+             audioElement.play(); 
+        
+    }
+    else {
+      
+        audioElement.pause(); 
+       
+    }
+  
+ 
+    } 
   </script>
  
 </body>
