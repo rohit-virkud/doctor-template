@@ -303,7 +303,7 @@
         .screen-02 p
         {
             width: min(85vw 42.5vh);
-            font-size: min(4vw,1.8vh);
+            font-size: min(4vw,1.6vh);
             color: #5F6061;
             margin-top: min(5vw,2.5vh);
         }
@@ -651,15 +651,15 @@
         .share-slide .close-icon
         {
             position: absolute;
-            top:2%;
-            right: 3%;
-            width: 5vw;
-            height: 5vw;
+            top:4%;
+            right: 7%;
+            width: min(5vw,3vh);
+            height: min(5vw,3vh);
         }
         .share-slide-share-icons
         {
             width: 100%;
-            height: 50%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -691,6 +691,11 @@
             width: min(11vw,5vh);
             height: min(11vw,5vh);
         }
+        .scan-and-save-txt
+        {
+            margin-top: min(30vw,10vh);
+            
+        }
         .qr-code-wrapper
         {
             width: 100%;
@@ -701,7 +706,7 @@
             color: #757575;
             align-items: center;
         }
-        .qr-code-wrapper img
+        .qr-code-container img
         { 
             width: min(40vw,20vh);
             height: min(40vw,20vh);
@@ -777,13 +782,17 @@
           <a href="#"><img src="twitter8.png"></a>
           <a href="#"><img src="linkedin3.png"></a>
       </div>
+      <h2 class="scan-and-save-txt">SCAN AND SAVE</h2>
+      <div class="qr-code-container">
+          <img src="qr.png">
+      </div>
   </div>
-  <div class="qr-code-wrapper">
+  <!--<div class="qr-code-wrapper">
     <h2>SCAN AND SAVE</h2>
     <div class="qr-code-container">
         <img src="qr.png">
     </div>
-  </div>
+  </div>-->
 </div>
   <!-- Swiper -->
   <div class="swiper-container">
