@@ -605,7 +605,8 @@
             height: min(34vw,17vh);
             position:absolute;
             top:45%;
-            left:10%
+            left:10%;
+            z-index: 1;
         }
         .arrow-container-five
         {
@@ -634,13 +635,152 @@
             height: min(4.38vw,2.2vh);
             
         }
+        /*share slide*/
+        .share-slide
+        {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #D8F1FB;
+            mix-blend-mode: normal;
+            backdrop-filter: blur(30px);
+            z-index: -222;
+           
+        }
+        .share-slide .close-icon
+        {
+            position: absolute;
+            top:2%;
+            right: 3%;
+            width: 5vw;
+            height: 5vw;
+        }
+        .share-slide-share-icons
+        {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .share-slide-share-icons h2, .qr-code-wrapper h2
+        {
+            font-size: min(5vw,2.5vh);
+            color: #757575;
+        }
+        .icon-grid
+        {
+            display: grid;
+            width: 80%;
+            grid-template-columns: 15vw 15vw 15vw 15vw;
+            grid-gap: min(5vw,2.5vh);
+            margin-top: min(2vw,1vh);
+            justify-content: center;
+        }
+        .icon-grid a
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon-grid img
+        {
+            width: min(15vw,8vh);
+            height: min(15vw,8vh);
+        }
+        .qr-code-wrapper
+        {
+            width: 100%;
+            height: 50vh;
+            
+            display: flex;
+            flex-direction: column;
+            color: #757575;
+            justify-content: center;
+            align-items: center;
+        }
+        .qr-code-wrapper img{ margin-top: min(2vw,1vh); }
+        .anim
+        {
+            z-index: 999999;
+            animation: fade 1.2s linear;
+        }
+        .anim2
+        {
+            animation: fade-out 1.2s linear;
+        }
+        @keyframes fade
+        {
+            0%
+            {
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes fade-out
+        {
+            0%
+            {
+                z-index: 999999;
+                opacity: 1;
+            }
+            100%{
+                z-index: -999999;
+                opacity: 0;
+            }
+
+        }
+        .zoomOut
+        {
+            animation: zoom-out 3s linear;
+        }
+        @keyframes zoom-out
+        {
+            0%
+            {
+                transform: scale(1.5);
+            }
+            100%{
+                transform: scale(1);
+            }
+
+        }
+        
         
 </style>
 </head>
 <body>
- <audio id="audio">
+
+<audio id="audio">
   <source src="doc.mpeg" type="audio/mpeg">
 </audio>
+<div class="share-slide" id="share-slide">
+  <img src="close icon.png" class="close-icon" onclick="closeTheShare()" >
+  <div class="share-slide-share-icons">
+      <h2>SHARE MY CARD</h2>
+      <div class="icon-grid">
+          <a href="#" ><img src="sms.png"></a>
+          <a href="#"><img src="cs.png"></a>
+          <a href="#"><img src="whatsapp.png"></a>
+          <a href="#"><img src="dropbox 187.png"></a>
+          <a href="#"><img src="fb9.png"></a>
+          <a href="#"><img src="telegram 191.png"></a>
+          <a href="#"><img src="twitter8.png"></a>
+          <a href="#"><img src="linkedin3.png"></a>
+      </div>
+  </div>
+  <div class="qr-code-wrapper">
+    <h2>SHARE MY CARD</h2>
+    <div class="qr-code-container">
+        <img src="qr.png">
+    </div>
+  </div>
+</div>
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -651,9 +791,9 @@
 				<div class="my-container">
 					
 					<div class="social-media">
-						<a href="#"><img src="youtube.png" class="youtube-icon"></a>
-						<a href="#" style="margin-left: 1.5vw;"><img src="instagram.png"  class="instagram-icon"></a>
-						<a href="#" style="margin-left: 1.5vw;"><img src="facebook.png"  class="facebook-icon"></a>
+						<a href="https://www.youtube.com/channel/UCfPN6DVghDNFBi6L-OpfuaA"><img src="youtube.png" class="youtube-icon"></a>
+						<a href="https://www.instagram.com/arfotis/" style="margin-left: 1.5vw;"><img src="instagram.png"  class="instagram-icon"></a>
+						<a href="https://www.facebook.com/oxeirourgos" style="margin-left: 1.5vw;"><img src="facebook.png"  class="facebook-icon"></a>
 					</div>
 	
 					<h1 class="headline" data-swiper-parallax="-300">DR. ΦΩτης ΑρχοντοβασΙλης</h1>
@@ -669,30 +809,30 @@
 			<div class="texture-blue-background">
 			 
 				<div class="my-container" style="width: 90vw;">
-					<a href="#" class="contact-container extraMT" data-swiper-parallax="-300">
+					<a href="tel:+30 6974442532" class="contact-container extraMT" data-swiper-parallax="-300">
 						<img src="phone-icon.png" class="phone-icon">
 						<p class="icon-text">+30 6974442532</p>
 					</a>
 	
-					<a href="#" class="contact-container"  data-swiper-parallax="-300">
+					<a href="tel:+30 2106502850" class="contact-container"  data-swiper-parallax="-300">
 						<img src="mobile icon.png" class="phone-icon">
 						<p class="icon-text">+30 2106502850 </p>
                     </a>
 	
-					<a href="#" class="contact-container" data-swiper-parallax="-300">
+					<a href="mailto:info@oxeirourgos.gr" class="contact-container" data-swiper-parallax="-300">
 						<img src="email icon.png" class="phone-icon" >
 						<p class="icon-text">info@oxeirourgos.gr
 							2</p>
                         </a>
 	
-					<a href="#" class="contact-container" data-swiper-parallax="-300">
+					<a href="https://www.google.com/maps/dir/18.4713216,73.8230272/Pythagora+7,+Cholargos+155+62,+Greece/@23.0284076,11.1325083,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x14a1984f81e07823:0xb4bd14e81d6df6af!2m2!1d23.7992139!2d38.0059491" class="contact-container" data-swiper-parallax="-300">
 						<img src="location icon.png" class="phone-icon" >
 						<p class="icon-text">Πυθαγόρα 7, Χολαργός, 
 							155 62, Αθήνα</p>
                         </a>
 				   
 					
-					<a href="#" class="contact-container" data-swiper-parallax="-300">
+					<a href="https://oxeirourgos.gr/" class="contact-container" data-swiper-parallax="-300">
 						<img src="web icon.png" class="phone-icon">
 						<p class="icon-text"> www.oxeirourgos.gr</p>
                     </a>
@@ -708,12 +848,12 @@
 							<img src="addcontact.png" class="share-icon">
 							<p class="share-icon-text">add 
 								my contact</p>
-                            </a>
-						<a href="#" class="share-container" style="margin-left: 6vw;" data-swiper-parallax="-400">
+                        </a>
+						<div class="share-container" onclick="share()" style="margin-left: 6vw;" data-swiper-parallax="-400">
 							<img src="share-icon.png" class="share-icon">
 							<p class="share-icon-text">share 
 								my contact</p>
-                            </a>
+                        </div>
                     </div>
 	
 	
@@ -797,9 +937,9 @@
 		<div class="footer-slide3">
             <div class="footer-wrapper" >
                 <div class="social-media" style="margin-bottom:min(6vw,3vh);" data-swiper-parallax="-300">
-                    <a href="#"><img src="yt.png" class="youtube-icon"></a>
-                    <a href="#" style="margin-left: 1.5vw;"><img src="ins.png"  class="instagram-icon"></a>
-                    <a href="#" style="margin-left: 1.5vw;"><img src="fbs.png"  class="facebook-icon"></a>
+                    <a href="https://www.youtube.com/channel/UCfPN6DVghDNFBi6L-OpfuaA"><img src="yt.png" class="youtube-icon"></a>
+                    <a href="https://www.instagram.com/arfotis/" style="margin-left: 1.5vw;"><img src="ins.png"  class="instagram-icon"></a>
+                    <a href="https://www.facebook.com/oxeirourgos" style="margin-left: 1.5vw;"><img src="fbs.png"  class="facebook-icon"></a>
                 </div>
             </div>
         </div> 
@@ -852,9 +992,9 @@
             <div class="footer-slide3">
                 <div class="footer-wrapper">
                     <div class="social-media" style="margin-bottom:min(6vw,3vh);">
-                        <a href="#" data-swiper-parallax="-300"><img src="youtube.png" class="youtube-icon"></a>
-                        <a href="#" style="margin-left: 1.5vw;" data-swiper-parallax="-300"><img src="instagram.png"  class="instagram-icon"></a>
-                        <a href="#" style="margin-left: 1.5vw;" data-swiper-parallax="-300"><img src="facebook.png"  class="facebook-icon"></a>
+                        <a href="https://www.youtube.com/watch?v=hzPch5utCgE&list=PLD8NwyVnm843mnrip4kvp9N8hYQKwz-lS   " data-swiper-parallax="-300"><img src="youtube.png" class="youtube-icon"></a>
+                        <a href="https://www.instagram.com/arfotis/" style="margin-left: 1.5vw;" data-swiper-parallax="-300"><img src="instagram.png"  class="instagram-icon"></a>
+                        <a href="https://www.facebook.com/oxeirourgos" style="margin-left: 1.5vw;" data-swiper-parallax="-300"><img src="facebook.png"  class="facebook-icon"></a>
                     </div>
                     
                 </div>
@@ -942,10 +1082,59 @@
       
         audioElement.pause(); 
        
-    }
-  
- 
+     }
+
     } 
+
+
+
+    /*share screen on off js*/
+
+    function share()
+    {
+        var element = document.getElementById("share-slide");
+        element.classList.add("anim");
+    }
+
+    function closeTheShare()
+    {
+      
+        var element = document.getElementById("share-slide");
+        element.classList.remove("anim");
+        element.classList.add("anim2");
+    }
+
+    /*image zoom in animations*/
+    var Slide4 = document.querySelector(".screen-04");
+    var Slide5 = document.querySelector(".screen-05");
+    var imgSlide4 = document.querySelector(".slide-04-img");
+    var imgSlide5 = document.querySelector(".slide-05-img");
+
+
+ 
+    var refreshId = setInterval(function(){ 
+    if(Slide4.classList.contains('swiper-slide-active'))
+    {
+        imgSlide4.classList.add("zoomOut");
+        clearInterval(refreshId);
+        
+        
+    }
+    }, 1000);
+
+
+    var refreshId2 = setInterval(function(){ 
+    if(Slide5.classList.contains('swiper-slide-active'))
+    {
+        imgSlide5.classList.add('zoomOut')
+        clearInterval(refreshId2);
+        
+        
+    }
+    }, 1000);
+    
+
+
   </script>
  
 </body>
