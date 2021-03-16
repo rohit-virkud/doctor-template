@@ -649,7 +649,7 @@
             mix-blend-mode: normal;
             backdrop-filter: blur(30px);
             z-index: -222;
-           transition: 0.5s all;
+            
         }
         .share-slide .close-icon
         {
@@ -718,7 +718,7 @@
         .anim
         {
             z-index: 999999;
-            animation: fade 1.2s linear;
+            animation: fade 1s linear;
         }
         .anim2
         {
@@ -728,34 +728,44 @@
         {
             0%
             {
+
                 opacity: 0;
+                z-index: -999999;
             }
+            
             100%{
                 opacity: 1;
+                z-index: 999999;
             }
         }
         @keyframes fade-out
         {
             0%
             {
-                z-index: 999999;
+                
                 opacity: 1;
+                z-index: 999999;
+            }
+            50%{
+                opacity: 0;
             }
             100%{
+                
+                
                 z-index: -999999;
-                opacity: 0;
+                
             }
 
         }
         .zoomOut
         {
-            animation: zoom-out 3s linear;
+            animation: zoom-out 4s linear;
         }
         @keyframes zoom-out
         {
             0%
             {
-                transform: scale(1.5);
+                transform: scale(1.8);
             }
             100%{
                 transform: scale(1);
@@ -1112,35 +1122,65 @@
     {
       
         var element = document.getElementById("share-slide");
-        element.classList.remove("anim");
         element.classList.add("anim2");
+        element.classList.remove("anim");
+        
     }
 
     /*image zoom in animations*/
+    var Slide3 = document.querySelector(".screen-03");
     var Slide4 = document.querySelector(".screen-04");
     var Slide5 = document.querySelector(".screen-05");
     var imgSlide4 = document.querySelector(".slide-04-img");
     var imgSlide5 = document.querySelector(".slide-05-img");
+    var i = 0;
+    var j=0;
+
+    var test = setInterval(function(){ 
+    console.log(swiper.activeIndex);
+
+                if(swiper.activeIndex == 4)
+                {
+                    i = swiper.activeIndex;
+                    
+                    if(i!==j)
+                    {
+                    
+                    imgSlide5.classList.add("zoomOut");
+                    imgSlide4.classList.remove("zoomOut");
+                    j = i;
+                    }
+                }else if(swiper.activeIndex == 3)
+                {
+                    i = swiper.activeIndex;
+                    
+                    if(i!==j)
+                    {
+                    
+                    imgSlide4.classList.add("zoomOut");
+                    imgSlide5.classList.remove("zoomOut");
+                    j = i;
+                    }
+                }else
+                {
+                    imgSlide4.classList.remove("zoomOut");
+                    imgSlide5.classList.remove("zoomOut");
+                    j=0;
+                }
+
+    },1000);
 
 
- 
-    var refreshId = setInterval(function(){ 
-    if(Slide4.classList.contains('swiper-slide-active'))
-    {
-        imgSlide4.classList.add("zoomOut");
-        clearInterval(refreshId);
-        
-        
-    }
-    }, 1000);
+    
+    
 
 
     var refreshId2 = setInterval(function(){ 
     if(Slide5.classList.contains('swiper-slide-active'))
     {
-        imgSlide5.classList.add('zoomOut')
+       
+        imgSlide5.classList.add('zoomOut');
         clearInterval(refreshId2);
-        
         
     }
     }, 1000);
