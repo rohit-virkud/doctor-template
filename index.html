@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>doctor template | @rohit_virkud</title>
+	<title></title>
 	 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -205,6 +205,22 @@
             text-align: center;
             
         }
+        .icon-image-container
+        {
+            width: min(12vw,6vh);
+            height: min(12vw,6vh);
+            background-color: #4981BF;
+            border: 1px solid #fff;
+            margin-bottom: min(3vw,1.5vh);
+            border-radius: 50%;;
+            box-shadow: 0px 4px 10px 3px rgba(73, 129, 191, 0.39);
+            margin-left: min(4vw,2.5vh);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+
+        }
 
         .share-icon-text
         {
@@ -213,17 +229,31 @@
             font-size: min(3vw,1.6vh);
             margin-block-start: 0em !important;
             margin-block-end: 0em !important;
-            word-break: normal !important;
+            text-align: center;
             
 
-
+        }
+        .share-icon-text-bottom,.save-icon-text-bottom
+        {
+            width: min(20vw,10vh);
+            font-weight: 400;
+            font-size: min(3vw,1.6vh);
+            margin-block-start: 0em !important;
+            margin-block-end: 0em !important;
+            margin-top:2em;
 
         }
-        .share-icon
+        .share-icon-share
         {
-            width: min(19vw,9vh);
-            height: min(19vw,9vh);
-            margin-top: min(2.433vw,1.3vh);
+            width: min(6vw,2.6vh);
+            height: min(5vw,2.5vh);      
+            z-index: 2;
+        }
+        .share-icon-save
+        {
+            width: min(5vw,2.5vh);
+            height: min(5vw,2.5vh);
+            margin-left: 0.8vw;
             z-index: 2;
         }
         .lottie-anim
@@ -672,7 +702,7 @@
         .share-slide-share-icons h2, .qr-code-wrapper h2
         {
             font-size: min(5vw,2.5vh);
-            color: #757575;
+            color: #1D4B7A;
         }
         .icon-grid
         {
@@ -706,7 +736,7 @@
             
             display: flex;
             flex-direction: column;
-            color: #757575;
+            color: #1D4B7A;
             align-items: center;
         }
         .qr-code-container img
@@ -718,7 +748,7 @@
         .anim
         {
             z-index: 999999;
-            animation: fade 1s linear;
+            animation: fade 0.5s linear;
         }
         .anim2
         {
@@ -732,9 +762,9 @@
                 opacity: 0;
                 z-index: -999999;
             }
-            
+           
             100%{
-                opacity: 1;
+               
                 z-index: 999999;
             }
         }
@@ -765,7 +795,7 @@
         {
             0%
             {
-                transform: scale(1.8);
+                transform: scale(2);
             }
             100%{
                 transform: scale(1);
@@ -819,11 +849,12 @@
 	
 					<h1 class="headline" data-swiper-parallax="-300">DR. ΦΩΤΗΣ ΑΡΧΟΝΤΟΒΑΣΙΛΗΣ</h1>
 					<p class="paragraph-mgTop" style="margin-bottom: 0;"  data-swiper-parallax="-200">MD, PhD, FISS, FEHS </p>
-					<p class="paragraph" style="margin-top: 0;" data-swiper-parallax="-200">Γενική - Λαπαροσκοπική και Ρομποτική Χειρουργικ</p>
+					<p class="paragraph" style="margin-top: 0;margin-bottom: 0;" data-swiper-parallax="-200">Γενική - Λαπαροσκοπική</p>
+                    <p class="paragraph" style="margin-top: 0;" data-swiper-parallax="-200">και Ρομποτική Χειρουργική</p>
 	
-					<p class="paragraph-bold" data-swiper-parallax="-200">Dr. Fotis Archontovasilis
-						AWR and Hernia Specialist, 
-						Laparoscopic and Robotic Surgery</p>
+					<p class="paragraph-bold" style="margin-bottom: 0;"  data-swiper-parallax="-200">Dr. Fotis Archontovasilis
+                        <p class="paragraph-bold" style="margin-top: 0;margin-bottom: 0;" data-swiper-parallax="-200">AWR and Hernia Specialist,</p>
+                        <p class="paragraph-bold" style="margin-top: 0;width: min(50vw,25vh);" data-swiper-parallax="-200">Laparoscopic and Robotic Surgery</p>    
 				</div>
 			   
 			</div>
@@ -866,14 +897,21 @@
 	
                      <div class="share-icon-holder" style="display: flex;">     
 						<a href="#" class="share-container" data-swiper-parallax="-400">
-							<img src="addcontact.png" class="share-icon">
-							<p class="share-icon-text">save 
-								my contact</p>
+							<div class="icon-image-container">
+                                <img src="addcontact-image.png" class="share-icon-save">
+                            </div>
+                            
+							<p class="share-icon-text">save</p> 
+                            <p class="save-icon-text-bottom">my contact</p>
                         </a>
 						<div class="share-container" onclick="share()" style="margin-left: 6vw;" data-swiper-parallax="-400">
-							<img src="share-icon.png" class="share-icon">
-							<p class="share-icon-text">share 
-								my contact</p>
+							<div class="icon-image-container">
+                                <img src="shareicon-image.png" class="share-icon-share">
+                            </div>
+                            
+                            
+							<p class="share-icon-text">share</p> 
+							<p class="share-icon-text-bottom">my contact</p>
                         </div>
                     </div>
 	
