@@ -216,7 +216,7 @@
             width: min(12vw,6vh);
             height: min(12vw,6vh);
             background-color: #4981BF;
-            border: 1px solid #fff;
+            border: 0.5vw solid #fff;
             margin-bottom: min(3vw,1.5vh);
             border-radius: 50%;;
             box-shadow: 0px 4px 10px 3px rgba(73, 129, 191, 0.39);
@@ -259,7 +259,7 @@
         {
             width: min(5vw,2.5vh);
             height: min(5vw,2.5vh);
-            margin-left: 0.8vw;
+            margin-left: 0.5vw;
             z-index: 2;
         }
         .lottie-anim
@@ -810,17 +810,26 @@
         }
         .zoomOut
         {
-            animation: zoom-out 4s linear;
+            
+            animation: zoom-out 5s linear;
+            transform: scale(1);
+        }
+        .zoomIn
+        {
+          
+            animation: zoom-In 5s linear;
+            transform: scale(1.8);
         }
         .zoom-out-fifth
         {
-            animation: zoom-out-fifthscreen 4s linear;
+            animation: zoom-out-fifthscreen 5s linear;
+            transform: scale(1);
         }
         @keyframes zoom-out
         {
             0%
             {
-                transform: scale(2);
+                transform: scale(1.8);
             }
             100%{
                 transform: scale(1);
@@ -838,6 +847,20 @@
             100%{
                 -webkit-transform: translateY(-22vw);
                 transform: scale(1);
+            }
+
+        }
+
+        @keyframes zoom-in
+        {
+            0%
+            {
+                
+                transform: scale(1);
+            }
+            100%{
+               
+                transform: scale(1.8);
             }
 
         }
@@ -987,7 +1010,7 @@
             </p>
 
             <p data-swiper-parallax="-200">
-                Ο ιατρός έχει εξειδικευτεί σε μεγάλα νοσοκομειακά κέντρα στην Ευρώπη και την Αμερική, στην ελάχιστα επεμβατική, Λαπαροσκοπική και Ρομποτική Χειρουργική των κηλών του κοιλιακού τοιχώματος, στις παθησεις του πεπτικού συστήματος, αλλά και τη χειρουργική των παθήσεων του πρωκτού.  
+                Ο ιατρός έχει εξειδικευτεί σε μεγάλα νοσοκομειακά κέντρα στην Ευρώπη και την Αμερική, στην ελάχιστα επεμβατική, Λαπαροσκοπική και Ρομποτική Χειρουργική των κηλών του κοιλιακού τοιχώματος, στις παθησεις του πεπτικού συστήματος, αλλά και τη χειρουργική των παθήσεις του πρωκτού.  
             </p>
 
         </div>
@@ -1012,7 +1035,7 @@
             </p>
 
             <p data-swiper-parallax="-200">
-                Είναι ο μοναδικός Χειρουργός στην Ελλάδα με πιστοποίηση εξαιρετικού και κορυφαίου Χειρουργού κηλών, από τον μεγαλύτερο Αμερικάνικο οργανισμό πιστοποίησης SRC (Surgicalreview.org)
+                Είναι ο μοναδικός Χειρουργός στην Ελλάδα με πιστοποίηση εξαιρετικού και κορυφαίου Χειρουργού κηλών, από τον μεγαλύτερο Αμερικάνικο οργανισμό πιστοποίησης SRC (Surgicalreview.org) 
             </p>
 
 
@@ -1227,6 +1250,8 @@
                     
                     imgSlide5.classList.add("zoom-out-fifth");
                     imgSlide4.classList.remove("zoomOut");
+                    imgSlide4.classList.add("zoomIn");
+                  
                     j = i;
                     }
                 }else if(swiper.activeIndex == 3)
@@ -1236,14 +1261,22 @@
                     if(i!==j)
                     {
                     
+                    imgSlide4.classList.remove("zoomIn");
                     imgSlide4.classList.add("zoomOut");
                     imgSlide5.classList.remove("zoom-out-fifth");
+                    imgSlide5.classList.add("zoomIn");
+                        
                     j = i;
                     }
                 }else
                 {
+                    
+                    
                     imgSlide4.classList.remove("zoomOut");
                     imgSlide5.classList.remove("zoom-out-fifth");
+                    imgSlide5.classList.add("zoomIn");
+                    imgSlide4.classList.add("zoomIn");
+                    
                     j=0;
                 }
 
