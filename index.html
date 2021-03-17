@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Doctor Template | @rohit_virkud</title>
+	<title></title>
 	 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -139,7 +139,7 @@
             margin-top: min(8vw,4vh);
             width: min(50vw,25vh);
             font-weight: 400;
-            font-size: min(3.2vw,1.5vh);
+            font-size: min(3.5vw,1.8vh);
 
         }
         .paragraph
@@ -147,14 +147,14 @@
           
             width: min(50vw,25vh);;
             font-weight: 400;
-            font-size: min(3.2vw,1.5vh)
+            font-size: min(3.5vw,1.8vh)
         }
         .paragraph-bold
         {
             margin-top: min(5vw,2.5vh);
-            width: min(40vw,25vh);
+            width: 80%;
             font-weight: 700;
-            font-size: min(3.2vw,1.5vh);
+            font-size: min(3.5vw,1.8vh);
             
         }
         .contact-container
@@ -291,6 +291,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-shrink: 0;
 
         }
         .flex p
@@ -323,6 +324,7 @@
             overflow: hidden;
             display: flex;
             justify-content: center;
+            flex-shrink: 0;
             
 
         }
@@ -371,6 +373,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            flex-shrink: 0;
             position:absolute;
             z-index: 2;
             bottom: 0;
@@ -427,6 +430,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+            flex-shrink: 0;
 			overflow: hidden;
 		}
         .awards-wrapper img
@@ -443,6 +447,7 @@
             width: 110%;
             display: flex;
             justify-content: space-between;
+            flex-shrink: 0;
         }
         .certify-wrapper img
         {
@@ -463,6 +468,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-shrink: 0;
             position: fixed;
             bottom: 0;
         }
@@ -495,6 +501,7 @@
         .arrow-container
         {
             display: flex;
+            flex-shrink: 0;
             position: fixed;
             width: min(20vw,9vh);
             height: min(10.204vw,5vh);
@@ -561,6 +568,7 @@
             height: 60%;
             display: flex;
             justify-content: center;
+            flex-shrink: 0;
 
         }
         
@@ -597,9 +605,10 @@
         {
 
             width: 100%;
-            height: 60vh;
+            height: 50vh;
             display: flex;
             justify-content: center;
+            flex-shrink: 0;
             
         }
         .screen-05-content
@@ -624,17 +633,19 @@
         .screen-05-img-container
         {
             width: 100%;
-            height: 40vh;
+            height:  50vh;
             background-color:black;
 
         }
         .slide-05-img
         {
             width: 100%;
-            height: 40vh;
+            height: 50vh;
             background:url('9.png') no-repeat;
             background-size: cover;
             background-position: center;
+            
+            
             
             
         }
@@ -643,7 +654,7 @@
             width: min(34vw,17vh);
             height: min(34vw,17vh);
             position:absolute;
-            top: 55%;
+            top: 45%;
             left:10%;
             z-index: 1;
         }
@@ -703,6 +714,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            flex-shrink: 0;
            
         }
         .share-slide-share-icons h2, .qr-code-wrapper h2
@@ -718,12 +730,14 @@
             grid-gap: min(2vw,1vh);
             margin-top: min(2vw,1vh);
             justify-content: center;
+            
         }
         .icon-grid a
         {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-shrink: 0;
         }
         .icon-grid img
         {
@@ -742,6 +756,7 @@
             
             display: flex;
             flex-direction: column;
+            flex-shrink: 0;
             color: #1D4B7A;
             align-items: center;
         }
@@ -797,6 +812,10 @@
         {
             animation: zoom-out 4s linear;
         }
+        .zoom-out-fifth
+        {
+            animation: zoom-out-fifthscreen 4s linear;
+        }
         @keyframes zoom-out
         {
             0%
@@ -808,6 +827,22 @@
             }
 
         }
+
+        @keyframes zoom-out-fifthscreen
+        {
+            0%
+            {
+                -webkit-transform: translateY(0);
+                transform: scale(1.8);
+            }
+            100%{
+                -webkit-transform: translateY(-22vw);
+                transform: scale(1);
+            }
+
+        }
+
+        
         
         
 </style>
@@ -860,7 +895,7 @@
 	
 					<p class="paragraph-bold" style="margin-bottom: 0;"  data-swiper-parallax="-200">Dr. Fotis Archontovasilis
                         <p class="paragraph-bold" style="margin-top: 0;margin-bottom: 0;" data-swiper-parallax="-200">AWR and Hernia Specialist,</p>
-                        <p class="paragraph-bold" style="margin-top: 0;width: min(50vw,25vh);" data-swiper-parallax="-200">Laparoscopic and Robotic Surgery</p>    
+                        <p class="paragraph-bold" style="margin-top: 0;" data-swiper-parallax="-200">Laparoscopic and Robotic Surgery</p>    
 				</div>
 			   
 			</div>
@@ -1190,7 +1225,7 @@
                     if(i!==j)
                     {
                     
-                    imgSlide5.classList.add("zoomOut");
+                    imgSlide5.classList.add("zoom-out-fifth");
                     imgSlide4.classList.remove("zoomOut");
                     j = i;
                     }
@@ -1202,33 +1237,18 @@
                     {
                     
                     imgSlide4.classList.add("zoomOut");
-                    imgSlide5.classList.remove("zoomOut");
+                    imgSlide5.classList.remove("zoom-out-fifth");
                     j = i;
                     }
                 }else
                 {
                     imgSlide4.classList.remove("zoomOut");
-                    imgSlide5.classList.remove("zoomOut");
+                    imgSlide5.classList.remove("zoom-out-fifth");
                     j=0;
                 }
 
     },1000);
 
-
-    
-    
-
-
-    var refreshId2 = setInterval(function(){ 
-    if(Slide5.classList.contains('swiper-slide-active'))
-    {
-       
-        imgSlide5.classList.add('zoomOut');
-        clearInterval(refreshId2);
-        
-    }
-    }, 1000);
-    
 
 
   </script>
