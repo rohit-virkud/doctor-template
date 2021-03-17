@@ -160,7 +160,7 @@
         .contact-container
         {
             height: min(15vw,7vh);
-            width: min(100vw,50vh);
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -178,26 +178,32 @@
         }
         .icon-text
         {
-            width: min(50vw,25vh);
+            width:80%;
             font-weight: 400;
             font-size: min(3.5vw,2.2vh);
             margin-block-start: 0em !important;
             margin-block-end: 0 !important;
+            word-break: break-word;
         }
         
         .share-icons-wrapper
         {
          width: 100%;
+          left:0;
           bottom: 0;
           position: fixed;
           margin-bottom:min(2.4vw,1.2vh);
           display: flex;
           justify-content: center;
           align-items: center;
+          flex-shrink: 0;
         }
         .share-icon-holder
         {
-            width: 50%;
+          display: flex;
+          justify-content: center;
+          flex-shrink: 0;
+          width: 50%;
         }
         .share-container
         {
@@ -336,7 +342,7 @@
         .screen-02 p
         {
             width: min(85vw 42.5vh);
-            font-size: min(4vw,1.6vh);
+            font-size: min(3.5vw,1.8vh);
             color: #5F6061;
             margin-top: min(5vw,2.5vh);
         }
@@ -352,7 +358,7 @@
         border-right: solid min(70vw,30vh) rgb(122,206,242,29%);
         border-left: solid min(50vw,28vh) transparent;
         border-top: solid min(50vw,28vh) transparent;
-        bottom: 0;
+        bottom: -2vw;
         right: 0;
         transform: rotateX(-10deg);
 
@@ -410,7 +416,7 @@
         }
 		.screen-03 p {
 			width: min(85vw 42.5vh);
-			font-size: min(3.5vw,1.8vh);
+			font-size: min(3.5vw,2vh);
             
 			color: #5F6061;
 			margin-top: min(5vw,2.5vh);
@@ -591,7 +597,7 @@
         {
 
             width: 100%;
-            height: 50vh;
+            height: 60vh;
             display: flex;
             justify-content: center;
             
@@ -618,14 +624,14 @@
         .screen-05-img-container
         {
             width: 100%;
-            height: 50vh;
+            height: 40vh;
             background-color:black;
 
         }
         .slide-05-img
         {
             width: 100%;
-            height: 50vh;
+            height: 100%;
             background:url('9.png') no-repeat;
             background-size: cover;
             background-position: center;
@@ -637,7 +643,7 @@
             width: min(34vw,17vh);
             height: min(34vw,17vh);
             position:absolute;
-            top:45%;
+            top: 5px;
             left:10%;
             z-index: 1;
         }
@@ -895,7 +901,7 @@
 	
 					<div class="share-icons-wrapper">
 	
-                     <div class="share-icon-holder" style="display: flex;">     
+                     <div class="share-icon-holder">     
 						<a href="#" class="share-container" data-swiper-parallax="-400">
 							<div class="icon-image-container">
                                 <img src="addcontact-image.png" class="share-icon-save">
