@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Doctor Template | @rohit_virkud</title>
+	<title></title>
 	 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -712,7 +712,6 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             flex-shrink: 0;
            
@@ -721,6 +720,7 @@
         {
             font-size: min(5vw,2.5vh);
             color: #1D4B7A;
+            margin-top: 50%;
         }
         .icon-grid
         {
@@ -843,10 +843,12 @@
             0%
             {
                 -webkit-transform: translateY(0);
+                -webkit-transform: translateX(-33vw) !important;
                 transform: scale(1.8);
             }
             100%{
                 -webkit-transform: translateY(-22vw);
+                -webkit-transform: translateX(0) !important;
                 transform: scale(1);
             }
 
@@ -890,7 +892,7 @@
           <a href="#"><img src="twitter8.png"></a>
           <a href="#"><img src="linkedin3.png"></a>
       </div>
-      <h2 class="scan-and-save-txt">SCAN AND SAVE</h2>
+      <h2 class="scan-and-save-txt" style=" margin-top: 18%;">SCAN AND SAVE</h2>
       <div class="qr-code-container">
           <img src="qr.png">
       </div>
